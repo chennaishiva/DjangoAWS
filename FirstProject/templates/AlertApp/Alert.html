@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "AlertApp/Base.html" %}
+{% load static %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Alert Page</title>
+    <script src="{% static 'JS/jquer_file.js' %}"></script>
+</head>
+<body>
+<h1>This is an alert Message</h1>
+
+<div class="alert message">
+
+    {% if messages %}
+    {% for msg in messages %}
+    <h1 class="alert_msg">{{msg}}</h1>
+    {% endfor %}
+    {% endif %}
+
+    <a onclick="alert()" href="{% url 'Success' %}">Success</a><br><br>
+    <a href="{% url 'Error' %}">Error</a><br><br>
+    <a href="{% url 'Info' %}">Information</a><br><br>
+    <a href="{% url 'Warn' %}">Warning</a>
+</div>
+
+<script>
+    $(document).ready(function(){$(".alert_msg").hide(5000);});
+    function alert(){
+    confirm("this success message")
+    };
+</script>
+
+</body>
+{% endblock %}
+</html>

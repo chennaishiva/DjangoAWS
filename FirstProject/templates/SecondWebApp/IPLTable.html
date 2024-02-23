@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IPL Points Table 2023</title>
+    {% load static %}
+</head>
+<body>
+<link rel="stylesheet" href="{% static 'CSS/table.css' %}">
+<table>
+<h1>Welcome To IPL {{year}}</h1>
+<h3>2023 IPL is hosted by {{name}}</h3>
+<h3>2023 IPL is hosted in {{country}}</h3>
+<h3>Today's match is scheduled in {{location}}</h3>
+<h3>Today's Date {{date}}</h3>
+  <tr>
+    <th>Rank</th>
+    <th>Team</th>
+    <th>Matches Played</th>
+    <th>Won</th>
+    <th>Loss</th>
+    <th>NRR</th>
+    <th>Points</th>
+  </tr>
+
+  <tr>
+    <td>1</td>
+    <td>CSK</td>
+    <td>20</td>
+    <td>20</td>
+    <td>0</td>
+    <td>188+</td>
+    <td>20</td>
+  </tr>
+
+   <tr>
+    <td>2</td>
+    <td>GT</td>
+    <td>20</td>
+    <td>19</td>
+    <td>1</td>
+    <td>177+</td>
+    <td>18</td>
+  </tr>
+
+</table>
+
+<img src="{% static 'Images/image1.jpg' %}" width="30%">
+
+</body>
+</html>

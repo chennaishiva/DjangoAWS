@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students Info</title>
+    {% load static %}
+
+    <style>
+        table{
+        color:red
+        }
+    </style>
+</head>
+<body>
+
+<h2>Students Information</h2>
+
+<table>
+    <tr>
+        <th>std ID</th>
+        <th>std Name</th>
+        <th>std Age</th>
+        <th>std Contact</th>
+        <th>std Email</th>
+        <th>std Course</th>
+    </tr>
+
+    <tr>
+        {% for i in info %}
+        <td>{{i.std_id}}</td>
+        <td>{{i.std_name}}</td>
+        <td>{{i.std_age}}</td>
+        <td>{{i.std_contact}}</td>
+        <td>{{i.std_email}}</td>
+        <td>{{i.std_course}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

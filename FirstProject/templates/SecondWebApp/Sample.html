@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample</title>
+    {% load static %}
+</head>
+<body>
+<h2>Sample Table</h2>
+<table>
+    <tr>
+        <th>samId</th>
+        <th>name</th>
+    </tr>
+    <tr>
+        {% for i in sampleTable %}
+        <td>{{i.sam_id}}</td>
+        <td>{{i.name}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
